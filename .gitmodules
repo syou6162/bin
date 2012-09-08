@@ -1,0 +1,3 @@
+[submodule "kansit"]
+	path = kansit
+	url = git://gist.github.com/152480.git
