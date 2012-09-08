@@ -1,0 +1,16 @@
+#!/bin/sh
+
+f=${1%tex}
+platex $1
+egrep '^\\documentclass\[.+\]\{beamer\}' $1
+
+if [ $? = 0 ];
+then
+   dvips ${f}dvi
+   convert-euc.pl < ${f}ps > ${f}utf8.ps
+   mv ${f}utf8.ps ${f}ps
+   ps2pdf ${f}ps
+else
+   dvipdfmx ${f}dvi
+fi
+
