@@ -1,3 +1,6 @@
 [submodule "kansit"]
 	path = kansit
 	url = git://gist.github.com/152480.git
+[submodule "cmdutils"]
+	path = cmdutils
+	url = https://github.com/brendano/cmdutils.git
